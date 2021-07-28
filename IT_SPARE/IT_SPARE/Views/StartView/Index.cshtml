@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout.cshtml";
+
+    var systemName = IT_SPARE.Models.ViewModel.Constants.SystemView;
+    var session = (IT_SPARE.Models.ViewModel.ModelSession)Session["ModelSession"];
+    var menu = session.modelSystem.T008_MENU;
+}
+
+<h2 class="text-center">Welcome to @systemName</h2>
+
+@if (menu.Count > 0)
+{
+    if (menu.Exists(x => x.T008_IDMENU.Equals("1")))
+    {
+        <h2 class="content-heading text-black">TONERS <small style="color:black;">(Access here to replace, change or reset a toner)</small></h2>
+    }
+
+    <div class="row">
+        @if (menu.Exists(x => x.T008_IDMENU.Equals("1.1")))
+        {
+            <div class="col-sm-6 col-lg-3">
+                <div class="block">
+                    <div style="height:165px;" class="block-content block-content-full ribbon ribbon-modern ribbon-primary border-black-op bg-primary">
+                        <a href="@Url.Action("IndexAll","Expense")">
+                            <div class="text-center push-20-t push">
+                                <i class="fa fa-list fa-3x text-white push"></i>
+                                <h3 class="h5" style="color:white;">All Toner Replacements</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (menu.Exists(x => x.T008_IDMENU.Equals("1.2")))
+        {
+            <div class="col-sm-6 col-lg-3">
+                <div class="block">
+                    <div style="height:165px;" class="block-content block-content-full ribbon ribbon-modern ribbon-primary border-black-op bg-modern-darker">
+                        <a href="@Url.Action("IndexNew","Expense")">
+                            <div class="text-center push-20-t push">
+                                <i class="fa fa-exchange fa-3x text-white push"></i>
+                                <h3 class="h5" style="color:white;">New Toner Change</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (menu.Exists(x => x.T008_IDMENU.Equals("1.3")))
+        {
+            <div class="col-sm-6 col-lg-3">
+                <div class="block">
+                    <div style="height:165px;" class="block-content block-content-full ribbon ribbon-modern ribbon-primary border-black-op bg-flat-dark-op">
+                        <a href="@Url.Action("IndexPrint","Label")">
+                            <div class="text-center push-20-t push">
+                                <i class="fa fa-plus fa-3x text-white push"></i>
+                                <h3 class="h5" style="color:white;">Reset Toner</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (menu.Exists(x => x.T008_IDMENU.Equals("1.3")))
+        {
+            <div class="col-sm-6 col-lg-3">
+                <div class="block">
+                    <div style="height:165px;" class="block-content block-content-full ribbon ribbon-modern ribbon-primary border-black-op bg-greenpoint">
+                        <a href="@Url.Action("IndexPrint","Label")">
+                            <div class="text-center push-20-t push">
+                                <i class="fa fa-tint fa-3x text-white push"></i>
+                                <h3 class="h5" style="color:white;">ainda nao sei</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

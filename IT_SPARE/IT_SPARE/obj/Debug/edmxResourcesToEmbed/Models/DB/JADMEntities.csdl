@@ -1,0 +1,728 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JADMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="T001_COLABORADOR">
+    <Key>
+      <PropertyRef Name="T001_IDCOLABORADOR" />
+    </Key>
+    <Property Name="T001_IDCOLABORADOR" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="T001_CONTROLE" Type="Int64" Nullable="false" />
+    <Property Name="T001_CRACHA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="T001_LOGIN" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="T001_NOME" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="T001_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="T001_TELEFONE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="T001_CELULAR" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="T002_IDCENTROCUSTO" Type="Int32" />
+    <Property Name="T003_IDTIPOCOLABORADOR" Type="Int32" />
+    <Property Name="T004_IDCARGO" Type="Int32" />
+    <Property Name="T006_IDTURNO" Type="Int32" />
+    <Property Name="T001_DTCADASTRO" Type="DateTime" Precision="3" />
+    <Property Name="T001_FGATIVO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="T001_FGFERIAS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="T001_TPCOLABORADOR" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="T005_IDSETOR" Type="Int32" />
+    <Property Name="T001_GESTORFUNC" Type="Int64" />
+    <Property Name="T001_CPF" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="T002_CENTROCUSTO" Relationship="Self.FK_T001_COLABORADOR_T002_CENTROCUSTO" FromRole="T001_COLABORADOR" ToRole="T002_CENTROCUSTO" />
+    <NavigationProperty Name="T003_TIPOCOLABORADOR" Relationship="Self.FK_T001_COLABORADOR_T003_TIPOCOLABORADOR" FromRole="T001_COLABORADOR" ToRole="T003_TIPOCOLABORADOR" />
+    <NavigationProperty Name="T004_CARGO" Relationship="Self.FK_T001_COLABORADOR_T004_CARGO" FromRole="T001_COLABORADOR" ToRole="T004_CARGO" />
+    <NavigationProperty Name="T006_TURNO" Relationship="Self.FK_T001_COLABORADOR_T006_TURNO" FromRole="T001_COLABORADOR" ToRole="T006_TURNO" />
+    <NavigationProperty Name="T014_PERFIL_COLABORADOR" Relationship="Self.FK_T014_PERFIL_COLABORADOR_T001_COLABORADOR" FromRole="T001_COLABORADOR" ToRole="T014_PERFIL_COLABORADOR" />
+    <NavigationProperty Name="T020_CENTRO_CUSTO_APROVADOR" Relationship="Self.FK_T020_CENTRO_CUSTO_APROVADOR_T001_COLABORADOR" FromRole="T001_COLABORADOR" ToRole="T020_CENTRO_CUSTO_APROVADOR" />
+    <NavigationProperty Name="T023_AREA_COLABORADOR" Relationship="Self.FK_T023_AREA_COLABORADOR_T001_COLABORADOR" FromRole="T001_COLABORADOR" ToRole="T023_AREA_COLABORADOR" />
+    <NavigationProperty Name="T011_GRUPO" Relationship="Self.T013_GRUPO_EMAIL_COLABORADOR" FromRole="T001_COLABORADOR" ToRole="T011_GRUPO" />
+    <NavigationProperty Name="T002_CENTROCUSTO1" Relationship="Self.T021_CENTRO_CUSTO_GESTOR" FromRole="T001_COLABORADOR" ToRole="T002_CENTROCUSTO" />
+    <NavigationProperty Name="T005_SETOR" Relationship="Self.T028_SETOR_COLABORADOR" FromRole="T001_COLABORADOR" ToRole="T005_SETOR" />
+  </EntityType>
+  <EntityType Name="T002_CENTROCUSTO">
+    <Key>
+      <PropertyRef Name="T002_IDCENTROCUSTO" />
+    </Key>
+    <Property Name="T002_IDCENTROCUSTO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="T002_CODIGO" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="T002_DESCRICAO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="T002_ATIVO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="T017_IDEMPRESA" Type="Int32" />
+    <Property Name="T025_IDPROFITCENTER" Type="Int32" />
+    <Property Name="T026_IDCLASSIFICACAO" Type="Int32" />
+    <Property Name="T005_IDSETOR" Type="Int32" />
+    <NavigationProperty Name="T001_COLABORADOR" Relationship="Self.FK_T001_COLABORADOR_T002_CENTROCUSTO" FromRole="T002_CENTROCUSTO" ToRole="T001_COLABORADOR" />
+    <NavigationProperty Name="T005_SETOR" Relationship="Self.FK_T002_CENTROCUSTO_T005_SETOR" FromRole="T002_CENTROCUSTO" ToRole="T005_SETOR" />
+    <NavigationProperty Name="T017_EMPRESA" Relationship="Self.FK_T002_CENTROCUSTO_T017_EMPRESA" FromRole="T002_CENTROCUSTO" ToRole="T017_EMPRESA" />
+    <NavigationProperty Name="T025_PROFITCENTER" Relationship="Self.FK_T002_CENTROCUSTO_T025_PROFITCENTER" FromRole="T002_CENTROCUSTO" ToRole="T025_PROFITCENTER" />
+    <NavigationProperty Name="T026_CLASSIFICACAO" Relationship="Self.FK_T002_CENTROCUSTO_T026_CLASSIFICACAO" FromRole="T002_CENTROCUSTO" ToRole="T026_CLASSIFICACAO" />
+    <NavigationProperty Name="T020_CENTRO_CUSTO_APROVADOR" Relationship="Self.FK_T020_CENTRO_CUSTO_APROVADOR_T002_CENTROCUSTO" FromRole="T002_CENTROCUSTO" ToRole="T020_CENTRO_CUSTO_APROVADOR" />
+    <NavigationProperty Name="T001_COLABORADOR1" Relationship="Self.T021_CENTRO_CUSTO_GESTOR" FromRole="T002_CENTROCUSTO" ToRole="T001_COLABORADOR" />
+  </EntityType>
+  <EntityType Name="T003_TIPOCOLABORADOR">
+    <Key>
+      <PropertyRef Name="T003_IDTIPOCOLABORADOR" />
+    </Key>
+    <Property Name="T003_IDTIPOCOLABORADOR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="T003_DESCRICAO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="T001_COLABORADOR" Relationship="Self.FK_T001_COLABORADOR_T003_TIPOCOLABORADOR" FromRole="T003_TIPOCOLABORADOR" ToRole="T001_COLABORADOR" />
+  </EntityType>
+  <EntityType Name="T004_CARGO">
+    <Key>
+      <PropertyRef Name="T004_IDCARGO" />
+    </Key>
+    <Property Name="T004_IDCARGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="T004_CODIGO" Type="Int32" />
+    <Property Name="T004_DESCRICAO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="T001_COLABORADOR" Relationship="Self.FK_T001_COLABORADOR_T004_CARGO" FromRole="T004_CARGO" ToRole="T001_COLABORADOR" />
+  </EntityType>
+  <EntityType Name="T005_SETOR">
+    <Key>
+      <PropertyRef Name="T005_IDSETOR" />
+    </Key>
+    <Property Name="T005_IDSETOR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="T005_DESCRICAO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="T005_GESTORWC" Type="Int64" />
+    <NavigationProperty Name="T002_CENTROCUSTO" Relationship="Self.FK_T002_CENTROCUSTO_T005_SETOR" FromRole="T005_SETOR" ToRole="T002_CENTROCUSTO" />
+    <NavigationProperty Name="T001_COLABORADOR" Relationship="Self.T028_SETOR_COLABORADOR" FromRole="T005_SETOR" ToRole="T001_COLABORADOR" />
+  </EntityType>
+  <EntityType Name="T006_TURNO">
+    <Key>
+      <PropertyRef Name="T006_IDTURNO" />
+    </Key>
+    <Property Name="T006_IDTURNO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="T006_NUMERO" Type="Int32" Nullable="false" />
+    <Property Name="T006_DESCRICAO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="T006_MUDA_DIA" Type="Boolean" />
+    <Property Name="T006_HORAENTRADA" Type="Time" Precision="7" />
+    <Property Name="T006_HORASAIDA" Type="Time" Precision="7" />
+    <Property Name="T006_HORALIMITETURNO" Type="Time" Precision="7" />
+    <Property Name="T006_TOLERANCIAHORAENTRADA" Type="Time" Precision="7" />
+    <Property Name="T006_TOLERANCIAHORASAIDA" Type="Time" Precision="7" />
+    <Property Name="T006_HORAENTRADAREFEICAO" Type="Time" Precision="7" />
+    <Property Name="T006_HORASAIDAREFEICAO" Type="Time" Precision="7" />
+    <NavigationProperty Name="T001_COLABORADOR" Relationship="Self.FK_T001_COLABORADOR_T006_TURNO" FromRole="T006_TURNO" ToRole="T001_COLABORADOR" />
+  </EntityType>
+  <EntityType Name="T007_SISTEMA">
+    <Key>
+      <PropertyRef Name="T007_IDSISTEMA" />
+    </Key>
+    <Property Name="T007_IDSISTEMA" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="T007_DESCRICAO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="T008_MENU" Relationship="Self.FK_T008_MENU_T007_SISTEMA" FromRole="T007_SISTEMA" ToRole="T008_MENU" />
+    <NavigationProperty Name="T014_PERFIL_COLABORADOR" Relationship="Self.FK_T014_PERFIL_COLABORADOR_T007_SISTEMA" FromRole="T007_SISTEMA" ToRole="T014_PERFIL_COLABORADOR" />
+    <NavigationProperty Name="T016_GRUPO_CLIENTE" Relationship="Self.FK_T016_GRUPO_CLIENTE_T007_SISTEMA" FromRole="T007_SISTEMA" ToRole="T016_GRUPO_CLIENTE" />
+    <NavigationProperty Name="T020_CENTRO_CUSTO_APROVADOR" Relationship="Self.FK_T020_CENTRO_CUSTO_APROVADOR_T007_SISTEMA" FromRole="T007_SISTEMA" ToRole="T020_CENTRO_CUSTO_APROVADOR" />
+    <NavigationProperty Name="T023_AREA_COLABORADOR" Relationship="Self.FK_T023_AREA_COLABORADOR_T007_SISTEMA" FromRole="T007_SISTEMA" ToRole="T023_AREA_COLABORADOR" />
+  </EntityType>
+  <EntityType Name="T008_MENU">
+    <Key>
+      <PropertyRef Name="T007_IDSISTEMA" />
+      <PropertyRef Name="T008_IDMENU" />
+    </Key>
+    <Property Name="T007_IDSISTEMA" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="T008_IDMENU" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="T008_DESCRICAO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="T007_SISTEMA" Relationship="Self.FK_T008_MENU_T007_SISTEMA" FromRole="T008_MENU" ToRole="T007_SISTEMA" />
+    <NavigationProperty Name="T009_PERFIL" Relationship="Self.T010_PERFIL_SISTEMA" FromRole="T008_MENU" ToRole="T009_PERFIL" />
+  </EntityType>
+  <EntityType Name="T009_PERFIL">
+    <Key>
+      <PropertyRef Name="T009_IDPERFIL" />
+    </Key>
+    <Property Name="T009_IDPERFIL" Type="Int32" Nullable="false" />
+    <Property Name="T009_DESCRICAO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="T014_PERFIL_COLABORADOR" Relationship="Self.FK_T014_PERFIL_COLABORADOR_T009_PERFIL" FromRole="T009_PERFIL" ToRole="T014_PERFIL_COLABORADOR" />
+    <NavigationProperty Name="T008_MENU" Relationship="Self.T010_PERFIL_SISTEMA" FromRole="T009_PERFIL" ToRole="T008_MENU" />
+    <NavigationProperty Name="T018_FUNCAO" Relationship="Self.T019_PERFIL_FUNCAO" FromRole="T009_PERFIL" ToRole="T018_FUNCAO" />
+  </EntityType>
+  <EntityType Name="T011_GRUPO">
+    <Key>
+      <PropertyRef Name="T011_IDGRUPO" />
+    </Key>
+    <Property Name="T011_IDGRUPO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="T011_NOME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="T012_GRUPO_EMAIL" Relationship="Self.FK_T012_GRUPO_EMAIL_T011_GRUPO" FromRole="T011_GRUPO" ToRole="T012_GRUPO_EMAIL" />
+    <NavigationProperty Name="T016_GRUPO_CLIENTE" Relationship="Self.FK_T016_GRUPO_CLIENTE_T011_GRUPO" FromRole="T011_GRUPO" ToRole="T016_GRUPO_CLIENTE" />
+    <NavigationProperty Name="T001_COLABORADOR" Relationship="Self.T013_GRUPO_EMAIL_COLABORADOR" FromRole="T011_GRUPO" ToRole="T001_COLABORADOR" />
+  </EntityType>
+  <EntityType Name="T012_GRUPO_EMAIL">
+    <Key>
+      <PropertyRef Name="T011_IDGRUPO" />
+      <PropertyRef Name="T012_EMAIL" />
+    </Key>
+    <Property Name="T011_IDGRUPO" Type="Int32" Nullable="false" />
+    <Property Name="T012_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="T011_GRUPO" Relationship="Self.FK_T012_GRUPO_EMAIL_T011_GRUPO" FromRole="T012_GRUPO_EMAIL" ToRole="T011_GRUPO" />
+  </EntityType>
+  <EntityType Name="T014_PERFIL_COLABORADOR">
+    <Key>
+      <PropertyRef Name="T001_IDCOLABORADOR" />
+      <PropertyRef Name="T009_IDPERFIL" />
+      <PropertyRef Name="T007_IDSISTEMA" />
+    </Key>
+    <Property Name="T001_IDCOLABORADOR" Type="Int64" Nullable="false" />
+    <Property Name="T009_IDPERFIL" Type="Int32" Nullable="false" />
+    <Property Name="T007_IDSISTEMA" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="T001_COLABORADOR" Relationship="Self.FK_T014_PERFIL_COLABORADOR_T001_COLABORADOR" FromRole="T014_PERFIL_COLABORADOR" ToRole="T001_COLABORADOR" />
+    <NavigationProperty Name="T007_SISTEMA" Relationship="Self.FK_T014_PERFIL_COLABORADOR_T007_SISTEMA" FromRole="T014_PERFIL_COLABORADOR" ToRole="T007_SISTEMA" />
+    <NavigationProperty Name="T009_PERFIL" Relationship="Self.FK_T014_PERFIL_COLABORADOR_T009_PERFIL" FromRole="T014_PERFIL_COLABORADOR" ToRole="T009_PERFIL" />
+  </EntityType>
+  <EntityType Name="T015_CLIENTE">
+    <Key>
+      <PropertyRef Name="T015_IDCLIENTE" />
+    </Key>
+    <Property Name="T015_IDCLIENTE" Type="Int32" Nullable="false" />
+    <Property Name="T015_NOME" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="T016_GRUPO_CLIENTE" Relationship="Self.FK_T016_GRUPO_CLIENTE_T015_CLIENTE" FromRole="T015_CLIENTE" ToRole="T016_GRUPO_CLIENTE" />
+  </EntityType>
+  <EntityType Name="T016_GRUPO_CLIENTE">
+    <Key>
+      <PropertyRef Name="T015_IDCLIENTE" />
+      <PropertyRef Name="T011_IDGRUPO" />
+      <PropertyRef Name="T007_IDSISTEMA" />
+    </Key>
+    <Property Name="T015_IDCLIENTE" Type="Int32" Nullable="false" />
+    <Property Name="T011_IDGRUPO" Type="Int32" Nullable="false" />
+    <Property Name="T007_IDSISTEMA" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="T007_SISTEMA" Relationship="Self.FK_T016_GRUPO_CLIENTE_T007_SISTEMA" FromRole="T016_GRUPO_CLIENTE" ToRole="T007_SISTEMA" />
+    <NavigationProperty Name="T011_GRUPO" Relationship="Self.FK_T016_GRUPO_CLIENTE_T011_GRUPO" FromRole="T016_GRUPO_CLIENTE" ToRole="T011_GRUPO" />
+    <NavigationProperty Name="T015_CLIENTE" Relationship="Self.FK_T016_GRUPO_CLIENTE_T015_CLIENTE" FromRole="T016_GRUPO_CLIENTE" ToRole="T015_CLIENTE" />
+  </EntityType>
+  <EntityType Name="T017_EMPRESA">
+    <Key>
+      <PropertyRef Name="T017_IDEMPRESA" />
+    </Key>
+    <Property Name="T017_IDEMPRESA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="T017_CNPJ_EMPRESA" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="T017_RAZAO_SOCIAL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="T017_NOME_FANTASIA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="T017_CODIGO_SAP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="T002_CENTROCUSTO" Relationship="Self.FK_T002_CENTROCUSTO_T017_EMPRESA" FromRole="T017_EMPRESA" ToRole="T002_CENTROCUSTO" />
+  </EntityType>
+  <EntityType Name="T018_FUNCAO">
+    <Key>
+      <PropertyRef Name="T018_IDFUNCAO" />
+    </Key>
+    <Property Name="T018_IDFUNCAO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="T018_DESCRICAO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="T009_PERFIL" Relationship="Self.T019_PERFIL_FUNCAO" FromRole="T018_FUNCAO" ToRole="T009_PERFIL" />
+  </EntityType>
+  <EntityType Name="T020_CENTRO_CUSTO_APROVADOR">
+    <Key>
+      <PropertyRef Name="T001_IDCOLABORADOR" />
+      <PropertyRef Name="T002_IDCENTROCUSTO" />
+      <PropertyRef Name="T007_IDSISTEMA" />
+      <PropertyRef Name="DT_INICIO" />
+    </Key>
+    <Property Name="T001_IDCOLABORADOR" Type="Int64" Nullable="false" />
+    <Property Name="T002_IDCENTROCUSTO" Type="Int32" Nullable="false" />
+    <Property Name="T007_IDSISTEMA" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DT_INICIO" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DT_FINAL" Type="DateTime" Precision="0" />
+    <Property Name="OBS_APROVADOR" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="T001_COLABORADOR" Relationship="Self.FK_T020_CENTRO_CUSTO_APROVADOR_T001_COLABORADOR" FromRole="T020_CENTRO_CUSTO_APROVADOR" ToRole="T001_COLABORADOR" />
+    <NavigationProperty Name="T002_CENTROCUSTO" Relationship="Self.FK_T020_CENTRO_CUSTO_APROVADOR_T002_CENTROCUSTO" FromRole="T020_CENTRO_CUSTO_APROVADOR" ToRole="T002_CENTROCUSTO" />
+    <NavigationProperty Name="T007_SISTEMA" Relationship="Self.FK_T020_CENTRO_CUSTO_APROVADOR_T007_SISTEMA" FromRole="T020_CENTRO_CUSTO_APROVADOR" ToRole="T007_SISTEMA" />
+  </EntityType>
+  <EntityType Name="T022_AREA">
+    <Key>
+      <PropertyRef Name="T022_IDAREA" />
+    </Key>
+    <Property Name="T022_IDAREA" Type="Int32" Nullable="false" />
+    <Property Name="T022_DESCRICAO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="T023_AREA_COLABORADOR" Relationship="Self.FK_T023_AREA_COLABORADOR_T022_AREA" FromRole="T022_AREA" ToRole="T023_AREA_COLABORADOR" />
+  </EntityType>
+  <EntityType Name="T023_AREA_COLABORADOR">
+    <Key>
+      <PropertyRef Name="T001_IDCOLABORADOR" />
+      <PropertyRef Name="T022_IDAREA" />
+      <PropertyRef Name="T007_IDSISTEMA" />
+    </Key>
+    <Property Name="T001_IDCOLABORADOR" Type="Int64" Nullable="false" />
+    <Property Name="T022_IDAREA" Type="Int32" Nullable="false" />
+    <Property Name="T007_IDSISTEMA" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="T001_COLABORADOR" Relationship="Self.FK_T023_AREA_COLABORADOR_T001_COLABORADOR" FromRole="T023_AREA_COLABORADOR" ToRole="T001_COLABORADOR" />
+    <NavigationProperty Name="T007_SISTEMA" Relationship="Self.FK_T023_AREA_COLABORADOR_T007_SISTEMA" FromRole="T023_AREA_COLABORADOR" ToRole="T007_SISTEMA" />
+    <NavigationProperty Name="T022_AREA" Relationship="Self.FK_T023_AREA_COLABORADOR_T022_AREA" FromRole="T023_AREA_COLABORADOR" ToRole="T022_AREA" />
+  </EntityType>
+  <EntityType Name="T025_PROFITCENTER">
+    <Key>
+      <PropertyRef Name="T025_IDPROFITCENTER" />
+    </Key>
+    <Property Name="T025_IDPROFITCENTER" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="T025_DESCRICAO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="T002_CENTROCUSTO" Relationship="Self.FK_T002_CENTROCUSTO_T025_PROFITCENTER" FromRole="T025_PROFITCENTER" ToRole="T002_CENTROCUSTO" />
+  </EntityType>
+  <EntityType Name="T026_CLASSIFICACAO">
+    <Key>
+      <PropertyRef Name="T026_IDCLASSIFICACAO" />
+    </Key>
+    <Property Name="T026_IDCLASSIFICACAO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="T026_DESCRICAO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="T002_CENTROCUSTO" Relationship="Self.FK_T002_CENTROCUSTO_T026_CLASSIFICACAO" FromRole="T026_CLASSIFICACAO" ToRole="T002_CENTROCUSTO" />
+  </EntityType>
+  <EntityType Name="T027_ADM_JADM">
+    <Key>
+      <PropertyRef Name="Usu_Adm_JADM" />
+    </Key>
+    <Property Name="Usu_Adm_JADM" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T029_PERFIL_SISTEMA">
+    <Key>
+      <PropertyRef Name="T029_ID" />
+      <PropertyRef Name="T007_IDSISTEMA" />
+      <PropertyRef Name="T009_IDPERFIL" />
+    </Key>
+    <Property Name="T029_ID" Type="Int64" Nullable="false" />
+    <Property Name="T007_IDSISTEMA" Type="Int32" Nullable="false" />
+    <Property Name="T009_IDPERFIL" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T024_ADCOLABORADOR">
+    <Key>
+      <PropertyRef Name="Nome" />
+      <PropertyRef Name="Login" />
+      <PropertyRef Name="Associar" />
+    </Key>
+    <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Login" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Telefone" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Associar" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_T001_COLABORADOR_T002_CENTROCUSTO">
+    <End Role="T002_CENTROCUSTO" Type="Self.T002_CENTROCUSTO" Multiplicity="0..1" />
+    <End Role="T001_COLABORADOR" Type="Self.T001_COLABORADOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T002_CENTROCUSTO">
+        <PropertyRef Name="T002_IDCENTROCUSTO" />
+      </Principal>
+      <Dependent Role="T001_COLABORADOR">
+        <PropertyRef Name="T002_IDCENTROCUSTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T001_COLABORADOR_T003_TIPOCOLABORADOR">
+    <End Role="T003_TIPOCOLABORADOR" Type="Self.T003_TIPOCOLABORADOR" Multiplicity="0..1" />
+    <End Role="T001_COLABORADOR" Type="Self.T001_COLABORADOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T003_TIPOCOLABORADOR">
+        <PropertyRef Name="T003_IDTIPOCOLABORADOR" />
+      </Principal>
+      <Dependent Role="T001_COLABORADOR">
+        <PropertyRef Name="T003_IDTIPOCOLABORADOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T001_COLABORADOR_T004_CARGO">
+    <End Role="T004_CARGO" Type="Self.T004_CARGO" Multiplicity="0..1" />
+    <End Role="T001_COLABORADOR" Type="Self.T001_COLABORADOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T004_CARGO">
+        <PropertyRef Name="T004_IDCARGO" />
+      </Principal>
+      <Dependent Role="T001_COLABORADOR">
+        <PropertyRef Name="T004_IDCARGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T001_COLABORADOR_T006_TURNO">
+    <End Role="T006_TURNO" Type="Self.T006_TURNO" Multiplicity="0..1" />
+    <End Role="T001_COLABORADOR" Type="Self.T001_COLABORADOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T006_TURNO">
+        <PropertyRef Name="T006_IDTURNO" />
+      </Principal>
+      <Dependent Role="T001_COLABORADOR">
+        <PropertyRef Name="T006_IDTURNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T014_PERFIL_COLABORADOR_T001_COLABORADOR">
+    <End Role="T001_COLABORADOR" Type="Self.T001_COLABORADOR" Multiplicity="1" />
+    <End Role="T014_PERFIL_COLABORADOR" Type="Self.T014_PERFIL_COLABORADOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T001_COLABORADOR">
+        <PropertyRef Name="T001_IDCOLABORADOR" />
+      </Principal>
+      <Dependent Role="T014_PERFIL_COLABORADOR">
+        <PropertyRef Name="T001_IDCOLABORADOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T020_CENTRO_CUSTO_APROVADOR_T001_COLABORADOR">
+    <End Role="T001_COLABORADOR" Type="Self.T001_COLABORADOR" Multiplicity="1" />
+    <End Role="T020_CENTRO_CUSTO_APROVADOR" Type="Self.T020_CENTRO_CUSTO_APROVADOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T001_COLABORADOR">
+        <PropertyRef Name="T001_IDCOLABORADOR" />
+      </Principal>
+      <Dependent Role="T020_CENTRO_CUSTO_APROVADOR">
+        <PropertyRef Name="T001_IDCOLABORADOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T023_AREA_COLABORADOR_T001_COLABORADOR">
+    <End Role="T001_COLABORADOR" Type="Self.T001_COLABORADOR" Multiplicity="1" />
+    <End Role="T023_AREA_COLABORADOR" Type="Self.T023_AREA_COLABORADOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T001_COLABORADOR">
+        <PropertyRef Name="T001_IDCOLABORADOR" />
+      </Principal>
+      <Dependent Role="T023_AREA_COLABORADOR">
+        <PropertyRef Name="T001_IDCOLABORADOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T002_CENTROCUSTO_T005_SETOR">
+    <End Role="T005_SETOR" Type="Self.T005_SETOR" Multiplicity="0..1" />
+    <End Role="T002_CENTROCUSTO" Type="Self.T002_CENTROCUSTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T005_SETOR">
+        <PropertyRef Name="T005_IDSETOR" />
+      </Principal>
+      <Dependent Role="T002_CENTROCUSTO">
+        <PropertyRef Name="T005_IDSETOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T002_CENTROCUSTO_T017_EMPRESA">
+    <End Role="T017_EMPRESA" Type="Self.T017_EMPRESA" Multiplicity="0..1" />
+    <End Role="T002_CENTROCUSTO" Type="Self.T002_CENTROCUSTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T017_EMPRESA">
+        <PropertyRef Name="T017_IDEMPRESA" />
+      </Principal>
+      <Dependent Role="T002_CENTROCUSTO">
+        <PropertyRef Name="T017_IDEMPRESA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T002_CENTROCUSTO_T025_PROFITCENTER">
+    <End Role="T025_PROFITCENTER" Type="Self.T025_PROFITCENTER" Multiplicity="0..1" />
+    <End Role="T002_CENTROCUSTO" Type="Self.T002_CENTROCUSTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T025_PROFITCENTER">
+        <PropertyRef Name="T025_IDPROFITCENTER" />
+      </Principal>
+      <Dependent Role="T002_CENTROCUSTO">
+        <PropertyRef Name="T025_IDPROFITCENTER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T002_CENTROCUSTO_T026_CLASSIFICACAO">
+    <End Role="T026_CLASSIFICACAO" Type="Self.T026_CLASSIFICACAO" Multiplicity="0..1" />
+    <End Role="T002_CENTROCUSTO" Type="Self.T002_CENTROCUSTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T026_CLASSIFICACAO">
+        <PropertyRef Name="T026_IDCLASSIFICACAO" />
+      </Principal>
+      <Dependent Role="T002_CENTROCUSTO">
+        <PropertyRef Name="T026_IDCLASSIFICACAO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T020_CENTRO_CUSTO_APROVADOR_T002_CENTROCUSTO">
+    <End Role="T002_CENTROCUSTO" Type="Self.T002_CENTROCUSTO" Multiplicity="1" />
+    <End Role="T020_CENTRO_CUSTO_APROVADOR" Type="Self.T020_CENTRO_CUSTO_APROVADOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T002_CENTROCUSTO">
+        <PropertyRef Name="T002_IDCENTROCUSTO" />
+      </Principal>
+      <Dependent Role="T020_CENTRO_CUSTO_APROVADOR">
+        <PropertyRef Name="T002_IDCENTROCUSTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T008_MENU_T007_SISTEMA">
+    <End Role="T007_SISTEMA" Type="Self.T007_SISTEMA" Multiplicity="1" />
+    <End Role="T008_MENU" Type="Self.T008_MENU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T007_SISTEMA">
+        <PropertyRef Name="T007_IDSISTEMA" />
+      </Principal>
+      <Dependent Role="T008_MENU">
+        <PropertyRef Name="T007_IDSISTEMA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T014_PERFIL_COLABORADOR_T007_SISTEMA">
+    <End Role="T007_SISTEMA" Type="Self.T007_SISTEMA" Multiplicity="1" />
+    <End Role="T014_PERFIL_COLABORADOR" Type="Self.T014_PERFIL_COLABORADOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T007_SISTEMA">
+        <PropertyRef Name="T007_IDSISTEMA" />
+      </Principal>
+      <Dependent Role="T014_PERFIL_COLABORADOR">
+        <PropertyRef Name="T007_IDSISTEMA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T016_GRUPO_CLIENTE_T007_SISTEMA">
+    <End Role="T007_SISTEMA" Type="Self.T007_SISTEMA" Multiplicity="1" />
+    <End Role="T016_GRUPO_CLIENTE" Type="Self.T016_GRUPO_CLIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T007_SISTEMA">
+        <PropertyRef Name="T007_IDSISTEMA" />
+      </Principal>
+      <Dependent Role="T016_GRUPO_CLIENTE">
+        <PropertyRef Name="T007_IDSISTEMA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T020_CENTRO_CUSTO_APROVADOR_T007_SISTEMA">
+    <End Role="T007_SISTEMA" Type="Self.T007_SISTEMA" Multiplicity="1" />
+    <End Role="T020_CENTRO_CUSTO_APROVADOR" Type="Self.T020_CENTRO_CUSTO_APROVADOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T007_SISTEMA">
+        <PropertyRef Name="T007_IDSISTEMA" />
+      </Principal>
+      <Dependent Role="T020_CENTRO_CUSTO_APROVADOR">
+        <PropertyRef Name="T007_IDSISTEMA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T023_AREA_COLABORADOR_T007_SISTEMA">
+    <End Role="T007_SISTEMA" Type="Self.T007_SISTEMA" Multiplicity="1" />
+    <End Role="T023_AREA_COLABORADOR" Type="Self.T023_AREA_COLABORADOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T007_SISTEMA">
+        <PropertyRef Name="T007_IDSISTEMA" />
+      </Principal>
+      <Dependent Role="T023_AREA_COLABORADOR">
+        <PropertyRef Name="T007_IDSISTEMA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T014_PERFIL_COLABORADOR_T009_PERFIL">
+    <End Role="T009_PERFIL" Type="Self.T009_PERFIL" Multiplicity="1" />
+    <End Role="T014_PERFIL_COLABORADOR" Type="Self.T014_PERFIL_COLABORADOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T009_PERFIL">
+        <PropertyRef Name="T009_IDPERFIL" />
+      </Principal>
+      <Dependent Role="T014_PERFIL_COLABORADOR">
+        <PropertyRef Name="T009_IDPERFIL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T012_GRUPO_EMAIL_T011_GRUPO">
+    <End Role="T011_GRUPO" Type="Self.T011_GRUPO" Multiplicity="1" />
+    <End Role="T012_GRUPO_EMAIL" Type="Self.T012_GRUPO_EMAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T011_GRUPO">
+        <PropertyRef Name="T011_IDGRUPO" />
+      </Principal>
+      <Dependent Role="T012_GRUPO_EMAIL">
+        <PropertyRef Name="T011_IDGRUPO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T016_GRUPO_CLIENTE_T011_GRUPO">
+    <End Role="T011_GRUPO" Type="Self.T011_GRUPO" Multiplicity="1" />
+    <End Role="T016_GRUPO_CLIENTE" Type="Self.T016_GRUPO_CLIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T011_GRUPO">
+        <PropertyRef Name="T011_IDGRUPO" />
+      </Principal>
+      <Dependent Role="T016_GRUPO_CLIENTE">
+        <PropertyRef Name="T011_IDGRUPO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T016_GRUPO_CLIENTE_T015_CLIENTE">
+    <End Role="T015_CLIENTE" Type="Self.T015_CLIENTE" Multiplicity="1" />
+    <End Role="T016_GRUPO_CLIENTE" Type="Self.T016_GRUPO_CLIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T015_CLIENTE">
+        <PropertyRef Name="T015_IDCLIENTE" />
+      </Principal>
+      <Dependent Role="T016_GRUPO_CLIENTE">
+        <PropertyRef Name="T015_IDCLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T023_AREA_COLABORADOR_T022_AREA">
+    <End Role="T022_AREA" Type="Self.T022_AREA" Multiplicity="1" />
+    <End Role="T023_AREA_COLABORADOR" Type="Self.T023_AREA_COLABORADOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T022_AREA">
+        <PropertyRef Name="T022_IDAREA" />
+      </Principal>
+      <Dependent Role="T023_AREA_COLABORADOR">
+        <PropertyRef Name="T022_IDAREA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="T010_PERFIL_SISTEMA">
+    <End Role="T008_MENU" Type="Self.T008_MENU" Multiplicity="*" />
+    <End Role="T009_PERFIL" Type="Self.T009_PERFIL" Multiplicity="*" />
+  </Association>
+  <Association Name="T013_GRUPO_EMAIL_COLABORADOR">
+    <End Role="T001_COLABORADOR" Type="Self.T001_COLABORADOR" Multiplicity="*" />
+    <End Role="T011_GRUPO" Type="Self.T011_GRUPO" Multiplicity="*" />
+  </Association>
+  <Association Name="T019_PERFIL_FUNCAO">
+    <End Role="T009_PERFIL" Type="Self.T009_PERFIL" Multiplicity="*" />
+    <End Role="T018_FUNCAO" Type="Self.T018_FUNCAO" Multiplicity="*" />
+  </Association>
+  <Association Name="T021_CENTRO_CUSTO_GESTOR">
+    <End Role="T001_COLABORADOR" Type="Self.T001_COLABORADOR" Multiplicity="*" />
+    <End Role="T002_CENTROCUSTO" Type="Self.T002_CENTROCUSTO" Multiplicity="*" />
+  </Association>
+  <Association Name="T028_SETOR_COLABORADOR">
+    <End Role="T001_COLABORADOR" Type="Self.T001_COLABORADOR" Multiplicity="*" />
+    <End Role="T005_SETOR" Type="Self.T005_SETOR" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="JADMEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="T001_COLABORADOR" EntityType="Self.T001_COLABORADOR" />
+    <EntitySet Name="T002_CENTROCUSTO" EntityType="Self.T002_CENTROCUSTO" />
+    <EntitySet Name="T003_TIPOCOLABORADOR" EntityType="Self.T003_TIPOCOLABORADOR" />
+    <EntitySet Name="T004_CARGO" EntityType="Self.T004_CARGO" />
+    <EntitySet Name="T005_SETOR" EntityType="Self.T005_SETOR" />
+    <EntitySet Name="T006_TURNO" EntityType="Self.T006_TURNO" />
+    <EntitySet Name="T007_SISTEMA" EntityType="Self.T007_SISTEMA" />
+    <EntitySet Name="T008_MENU" EntityType="Self.T008_MENU" />
+    <EntitySet Name="T009_PERFIL" EntityType="Self.T009_PERFIL" />
+    <EntitySet Name="T011_GRUPO" EntityType="Self.T011_GRUPO" />
+    <EntitySet Name="T012_GRUPO_EMAIL" EntityType="Self.T012_GRUPO_EMAIL" />
+    <EntitySet Name="T014_PERFIL_COLABORADOR" EntityType="Self.T014_PERFIL_COLABORADOR" />
+    <EntitySet Name="T015_CLIENTE" EntityType="Self.T015_CLIENTE" />
+    <EntitySet Name="T016_GRUPO_CLIENTE" EntityType="Self.T016_GRUPO_CLIENTE" />
+    <EntitySet Name="T017_EMPRESA" EntityType="Self.T017_EMPRESA" />
+    <EntitySet Name="T018_FUNCAO" EntityType="Self.T018_FUNCAO" />
+    <EntitySet Name="T020_CENTRO_CUSTO_APROVADOR" EntityType="Self.T020_CENTRO_CUSTO_APROVADOR" />
+    <EntitySet Name="T022_AREA" EntityType="Self.T022_AREA" />
+    <EntitySet Name="T023_AREA_COLABORADOR" EntityType="Self.T023_AREA_COLABORADOR" />
+    <EntitySet Name="T025_PROFITCENTER" EntityType="Self.T025_PROFITCENTER" />
+    <EntitySet Name="T026_CLASSIFICACAO" EntityType="Self.T026_CLASSIFICACAO" />
+    <EntitySet Name="T027_ADM_JADM" EntityType="Self.T027_ADM_JADM" />
+    <EntitySet Name="T029_PERFIL_SISTEMA" EntityType="Self.T029_PERFIL_SISTEMA" />
+    <EntitySet Name="T024_ADCOLABORADOR" EntityType="Self.T024_ADCOLABORADOR" />
+    <AssociationSet Name="FK_T001_COLABORADOR_T002_CENTROCUSTO" Association="Self.FK_T001_COLABORADOR_T002_CENTROCUSTO">
+      <End Role="T002_CENTROCUSTO" EntitySet="T002_CENTROCUSTO" />
+      <End Role="T001_COLABORADOR" EntitySet="T001_COLABORADOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T001_COLABORADOR_T003_TIPOCOLABORADOR" Association="Self.FK_T001_COLABORADOR_T003_TIPOCOLABORADOR">
+      <End Role="T003_TIPOCOLABORADOR" EntitySet="T003_TIPOCOLABORADOR" />
+      <End Role="T001_COLABORADOR" EntitySet="T001_COLABORADOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T001_COLABORADOR_T004_CARGO" Association="Self.FK_T001_COLABORADOR_T004_CARGO">
+      <End Role="T004_CARGO" EntitySet="T004_CARGO" />
+      <End Role="T001_COLABORADOR" EntitySet="T001_COLABORADOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T001_COLABORADOR_T006_TURNO" Association="Self.FK_T001_COLABORADOR_T006_TURNO">
+      <End Role="T006_TURNO" EntitySet="T006_TURNO" />
+      <End Role="T001_COLABORADOR" EntitySet="T001_COLABORADOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T014_PERFIL_COLABORADOR_T001_COLABORADOR" Association="Self.FK_T014_PERFIL_COLABORADOR_T001_COLABORADOR">
+      <End Role="T001_COLABORADOR" EntitySet="T001_COLABORADOR" />
+      <End Role="T014_PERFIL_COLABORADOR" EntitySet="T014_PERFIL_COLABORADOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T020_CENTRO_CUSTO_APROVADOR_T001_COLABORADOR" Association="Self.FK_T020_CENTRO_CUSTO_APROVADOR_T001_COLABORADOR">
+      <End Role="T001_COLABORADOR" EntitySet="T001_COLABORADOR" />
+      <End Role="T020_CENTRO_CUSTO_APROVADOR" EntitySet="T020_CENTRO_CUSTO_APROVADOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T023_AREA_COLABORADOR_T001_COLABORADOR" Association="Self.FK_T023_AREA_COLABORADOR_T001_COLABORADOR">
+      <End Role="T001_COLABORADOR" EntitySet="T001_COLABORADOR" />
+      <End Role="T023_AREA_COLABORADOR" EntitySet="T023_AREA_COLABORADOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T002_CENTROCUSTO_T005_SETOR" Association="Self.FK_T002_CENTROCUSTO_T005_SETOR">
+      <End Role="T005_SETOR" EntitySet="T005_SETOR" />
+      <End Role="T002_CENTROCUSTO" EntitySet="T002_CENTROCUSTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T002_CENTROCUSTO_T017_EMPRESA" Association="Self.FK_T002_CENTROCUSTO_T017_EMPRESA">
+      <End Role="T017_EMPRESA" EntitySet="T017_EMPRESA" />
+      <End Role="T002_CENTROCUSTO" EntitySet="T002_CENTROCUSTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T002_CENTROCUSTO_T025_PROFITCENTER" Association="Self.FK_T002_CENTROCUSTO_T025_PROFITCENTER">
+      <End Role="T025_PROFITCENTER" EntitySet="T025_PROFITCENTER" />
+      <End Role="T002_CENTROCUSTO" EntitySet="T002_CENTROCUSTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T002_CENTROCUSTO_T026_CLASSIFICACAO" Association="Self.FK_T002_CENTROCUSTO_T026_CLASSIFICACAO">
+      <End Role="T026_CLASSIFICACAO" EntitySet="T026_CLASSIFICACAO" />
+      <End Role="T002_CENTROCUSTO" EntitySet="T002_CENTROCUSTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T020_CENTRO_CUSTO_APROVADOR_T002_CENTROCUSTO" Association="Self.FK_T020_CENTRO_CUSTO_APROVADOR_T002_CENTROCUSTO">
+      <End Role="T002_CENTROCUSTO" EntitySet="T002_CENTROCUSTO" />
+      <End Role="T020_CENTRO_CUSTO_APROVADOR" EntitySet="T020_CENTRO_CUSTO_APROVADOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T008_MENU_T007_SISTEMA" Association="Self.FK_T008_MENU_T007_SISTEMA">
+      <End Role="T007_SISTEMA" EntitySet="T007_SISTEMA" />
+      <End Role="T008_MENU" EntitySet="T008_MENU" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T014_PERFIL_COLABORADOR_T007_SISTEMA" Association="Self.FK_T014_PERFIL_COLABORADOR_T007_SISTEMA">
+      <End Role="T007_SISTEMA" EntitySet="T007_SISTEMA" />
+      <End Role="T014_PERFIL_COLABORADOR" EntitySet="T014_PERFIL_COLABORADOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T016_GRUPO_CLIENTE_T007_SISTEMA" Association="Self.FK_T016_GRUPO_CLIENTE_T007_SISTEMA">
+      <End Role="T007_SISTEMA" EntitySet="T007_SISTEMA" />
+      <End Role="T016_GRUPO_CLIENTE" EntitySet="T016_GRUPO_CLIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T020_CENTRO_CUSTO_APROVADOR_T007_SISTEMA" Association="Self.FK_T020_CENTRO_CUSTO_APROVADOR_T007_SISTEMA">
+      <End Role="T007_SISTEMA" EntitySet="T007_SISTEMA" />
+      <End Role="T020_CENTRO_CUSTO_APROVADOR" EntitySet="T020_CENTRO_CUSTO_APROVADOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T023_AREA_COLABORADOR_T007_SISTEMA" Association="Self.FK_T023_AREA_COLABORADOR_T007_SISTEMA">
+      <End Role="T007_SISTEMA" EntitySet="T007_SISTEMA" />
+      <End Role="T023_AREA_COLABORADOR" EntitySet="T023_AREA_COLABORADOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T014_PERFIL_COLABORADOR_T009_PERFIL" Association="Self.FK_T014_PERFIL_COLABORADOR_T009_PERFIL">
+      <End Role="T009_PERFIL" EntitySet="T009_PERFIL" />
+      <End Role="T014_PERFIL_COLABORADOR" EntitySet="T014_PERFIL_COLABORADOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T012_GRUPO_EMAIL_T011_GRUPO" Association="Self.FK_T012_GRUPO_EMAIL_T011_GRUPO">
+      <End Role="T011_GRUPO" EntitySet="T011_GRUPO" />
+      <End Role="T012_GRUPO_EMAIL" EntitySet="T012_GRUPO_EMAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T016_GRUPO_CLIENTE_T011_GRUPO" Association="Self.FK_T016_GRUPO_CLIENTE_T011_GRUPO">
+      <End Role="T011_GRUPO" EntitySet="T011_GRUPO" />
+      <End Role="T016_GRUPO_CLIENTE" EntitySet="T016_GRUPO_CLIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T016_GRUPO_CLIENTE_T015_CLIENTE" Association="Self.FK_T016_GRUPO_CLIENTE_T015_CLIENTE">
+      <End Role="T015_CLIENTE" EntitySet="T015_CLIENTE" />
+      <End Role="T016_GRUPO_CLIENTE" EntitySet="T016_GRUPO_CLIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T023_AREA_COLABORADOR_T022_AREA" Association="Self.FK_T023_AREA_COLABORADOR_T022_AREA">
+      <End Role="T022_AREA" EntitySet="T022_AREA" />
+      <End Role="T023_AREA_COLABORADOR" EntitySet="T023_AREA_COLABORADOR" />
+    </AssociationSet>
+    <AssociationSet Name="T010_PERFIL_SISTEMA" Association="Self.T010_PERFIL_SISTEMA">
+      <End Role="T008_MENU" EntitySet="T008_MENU" />
+      <End Role="T009_PERFIL" EntitySet="T009_PERFIL" />
+    </AssociationSet>
+    <AssociationSet Name="T013_GRUPO_EMAIL_COLABORADOR" Association="Self.T013_GRUPO_EMAIL_COLABORADOR">
+      <End Role="T001_COLABORADOR" EntitySet="T001_COLABORADOR" />
+      <End Role="T011_GRUPO" EntitySet="T011_GRUPO" />
+    </AssociationSet>
+    <AssociationSet Name="T019_PERFIL_FUNCAO" Association="Self.T019_PERFIL_FUNCAO">
+      <End Role="T009_PERFIL" EntitySet="T009_PERFIL" />
+      <End Role="T018_FUNCAO" EntitySet="T018_FUNCAO" />
+    </AssociationSet>
+    <AssociationSet Name="T021_CENTRO_CUSTO_GESTOR" Association="Self.T021_CENTRO_CUSTO_GESTOR">
+      <End Role="T001_COLABORADOR" EntitySet="T001_COLABORADOR" />
+      <End Role="T002_CENTROCUSTO" EntitySet="T002_CENTROCUSTO" />
+    </AssociationSet>
+    <AssociationSet Name="T028_SETOR_COLABORADOR" Association="Self.T028_SETOR_COLABORADOR">
+      <End Role="T001_COLABORADOR" EntitySet="T001_COLABORADOR" />
+      <End Role="T005_SETOR" EntitySet="T005_SETOR" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JADMModelStoreContainer" CdmEntityContainer="JADMEntities">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="JADMModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="JADMModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T001_COLABORADOR">
+      <EntityTypeMapping TypeName="JADMModel.T001_COLABORADOR">
+        <MappingFragment StoreEntitySet="T001_COLABORADOR">
+          <ScalarProperty Name="T001_IDCOLABORADOR" ColumnName="T001_IDCOLABORADOR" />
+          <ScalarProperty Name="T001_CONTROLE" ColumnName="T001_CONTROLE" />
+          <ScalarProperty Name="T001_CRACHA" ColumnName="T001_CRACHA" />
+          <ScalarProperty Name="T001_LOGIN" ColumnName="T001_LOGIN" />
+          <ScalarProperty Name="T001_NOME" ColumnName="T001_NOME" />
+          <ScalarProperty Name="T001_EMAIL" ColumnName="T001_EMAIL" />
+          <ScalarProperty Name="T001_TELEFONE" ColumnName="T001_TELEFONE" />
+          <ScalarProperty Name="T001_CELULAR" ColumnName="T001_CELULAR" />
+          <ScalarProperty Name="T002_IDCENTROCUSTO" ColumnName="T002_IDCENTROCUSTO" />
+          <ScalarProperty Name="T003_IDTIPOCOLABORADOR" ColumnName="T003_IDTIPOCOLABORADOR" />
+          <ScalarProperty Name="T004_IDCARGO" ColumnName="T004_IDCARGO" />
+          <ScalarProperty Name="T006_IDTURNO" ColumnName="T006_IDTURNO" />
+          <ScalarProperty Name="T001_DTCADASTRO" ColumnName="T001_DTCADASTRO" />
+          <ScalarProperty Name="T001_FGATIVO" ColumnName="T001_FGATIVO" />
+          <ScalarProperty Name="T001_FGFERIAS" ColumnName="T001_FGFERIAS" />
+          <ScalarProperty Name="T001_TPCOLABORADOR" ColumnName="T001_TPCOLABORADOR" />
+          <ScalarProperty Name="T005_IDSETOR" ColumnName="T005_IDSETOR" />
+          <ScalarProperty Name="T001_GESTORFUNC" ColumnName="T001_GESTORFUNC" />
+          <ScalarProperty Name="T001_CPF" ColumnName="T001_CPF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T002_CENTROCUSTO">
+      <EntityTypeMapping TypeName="JADMModel.T002_CENTROCUSTO">
+        <MappingFragment StoreEntitySet="T002_CENTROCUSTO">
+          <ScalarProperty Name="T002_IDCENTROCUSTO" ColumnName="T002_IDCENTROCUSTO" />
+          <ScalarProperty Name="T002_CODIGO" ColumnName="T002_CODIGO" />
+          <ScalarProperty Name="T002_DESCRICAO" ColumnName="T002_DESCRICAO" />
+          <ScalarProperty Name="T002_ATIVO" ColumnName="T002_ATIVO" />
+          <ScalarProperty Name="T017_IDEMPRESA" ColumnName="T017_IDEMPRESA" />
+          <ScalarProperty Name="T025_IDPROFITCENTER" ColumnName="T025_IDPROFITCENTER" />
+          <ScalarProperty Name="T026_IDCLASSIFICACAO" ColumnName="T026_IDCLASSIFICACAO" />
+          <ScalarProperty Name="T005_IDSETOR" ColumnName="T005_IDSETOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T003_TIPOCOLABORADOR">
+      <EntityTypeMapping TypeName="JADMModel.T003_TIPOCOLABORADOR">
+        <MappingFragment StoreEntitySet="T003_TIPOCOLABORADOR">
+          <ScalarProperty Name="T003_IDTIPOCOLABORADOR" ColumnName="T003_IDTIPOCOLABORADOR" />
+          <ScalarProperty Name="T003_DESCRICAO" ColumnName="T003_DESCRICAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T004_CARGO">
+      <EntityTypeMapping TypeName="JADMModel.T004_CARGO">
+        <MappingFragment StoreEntitySet="T004_CARGO">
+          <ScalarProperty Name="T004_IDCARGO" ColumnName="T004_IDCARGO" />
+          <ScalarProperty Name="T004_CODIGO" ColumnName="T004_CODIGO" />
+          <ScalarProperty Name="T004_DESCRICAO" ColumnName="T004_DESCRICAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T005_SETOR">
+      <EntityTypeMapping TypeName="JADMModel.T005_SETOR">
+        <MappingFragment StoreEntitySet="T005_SETOR">
+          <ScalarProperty Name="T005_IDSETOR" ColumnName="T005_IDSETOR" />
+          <ScalarProperty Name="T005_DESCRICAO" ColumnName="T005_DESCRICAO" />
+          <ScalarProperty Name="T005_GESTORWC" ColumnName="T005_GESTORWC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T006_TURNO">
+      <EntityTypeMapping TypeName="JADMModel.T006_TURNO">
+        <MappingFragment StoreEntitySet="T006_TURNO">
+          <ScalarProperty Name="T006_IDTURNO" ColumnName="T006_IDTURNO" />
+          <ScalarProperty Name="T006_NUMERO" ColumnName="T006_NUMERO" />
+          <ScalarProperty Name="T006_DESCRICAO" ColumnName="T006_DESCRICAO" />
+          <ScalarProperty Name="T006_MUDA_DIA" ColumnName="T006_MUDA_DIA" />
+          <ScalarProperty Name="T006_HORAENTRADA" ColumnName="T006_HORAENTRADA" />
+          <ScalarProperty Name="T006_HORASAIDA" ColumnName="T006_HORASAIDA" />
+          <ScalarProperty Name="T006_HORALIMITETURNO" ColumnName="T006_HORALIMITETURNO" />
+          <ScalarProperty Name="T006_TOLERANCIAHORAENTRADA" ColumnName="T006_TOLERANCIAHORAENTRADA" />
+          <ScalarProperty Name="T006_TOLERANCIAHORASAIDA" ColumnName="T006_TOLERANCIAHORASAIDA" />
+          <ScalarProperty Name="T006_HORAENTRADAREFEICAO" ColumnName="T006_HORAENTRADAREFEICAO" />
+          <ScalarProperty Name="T006_HORASAIDAREFEICAO" ColumnName="T006_HORASAIDAREFEICAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T007_SISTEMA">
+      <EntityTypeMapping TypeName="JADMModel.T007_SISTEMA">
+        <MappingFragment StoreEntitySet="T007_SISTEMA">
+          <ScalarProperty Name="T007_IDSISTEMA" ColumnName="T007_IDSISTEMA" />
+          <ScalarProperty Name="T007_DESCRICAO" ColumnName="T007_DESCRICAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T008_MENU">
+      <EntityTypeMapping TypeName="JADMModel.T008_MENU">
+        <MappingFragment StoreEntitySet="T008_MENU">
+          <ScalarProperty Name="T007_IDSISTEMA" ColumnName="T007_IDSISTEMA" />
+          <ScalarProperty Name="T008_IDMENU" ColumnName="T008_IDMENU" />
+          <ScalarProperty Name="T008_DESCRICAO" ColumnName="T008_DESCRICAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T009_PERFIL">
+      <EntityTypeMapping TypeName="JADMModel.T009_PERFIL">
+        <MappingFragment StoreEntitySet="T009_PERFIL">
+          <ScalarProperty Name="T009_IDPERFIL" ColumnName="T009_IDPERFIL" />
+          <ScalarProperty Name="T009_DESCRICAO" ColumnName="T009_DESCRICAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T011_GRUPO">
+      <EntityTypeMapping TypeName="JADMModel.T011_GRUPO">
+        <MappingFragment StoreEntitySet="T011_GRUPO">
+          <ScalarProperty Name="T011_IDGRUPO" ColumnName="T011_IDGRUPO" />
+          <ScalarProperty Name="T011_NOME" ColumnName="T011_NOME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T012_GRUPO_EMAIL">
+      <EntityTypeMapping TypeName="JADMModel.T012_GRUPO_EMAIL">
+        <MappingFragment StoreEntitySet="T012_GRUPO_EMAIL">
+          <ScalarProperty Name="T011_IDGRUPO" ColumnName="T011_IDGRUPO" />
+          <ScalarProperty Name="T012_EMAIL" ColumnName="T012_EMAIL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T014_PERFIL_COLABORADOR">
+      <EntityTypeMapping TypeName="JADMModel.T014_PERFIL_COLABORADOR">
+        <MappingFragment StoreEntitySet="T014_PERFIL_COLABORADOR">
+          <ScalarProperty Name="T001_IDCOLABORADOR" ColumnName="T001_IDCOLABORADOR" />
+          <ScalarProperty Name="T009_IDPERFIL" ColumnName="T009_IDPERFIL" />
+          <ScalarProperty Name="T007_IDSISTEMA" ColumnName="T007_IDSISTEMA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T015_CLIENTE">
+      <EntityTypeMapping TypeName="JADMModel.T015_CLIENTE">
+        <MappingFragment StoreEntitySet="T015_CLIENTE">
+          <ScalarProperty Name="T015_IDCLIENTE" ColumnName="T015_IDCLIENTE" />
+          <ScalarProperty Name="T015_NOME" ColumnName="T015_NOME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T016_GRUPO_CLIENTE">
+      <EntityTypeMapping TypeName="JADMModel.T016_GRUPO_CLIENTE">
+        <MappingFragment StoreEntitySet="T016_GRUPO_CLIENTE">
+          <ScalarProperty Name="T015_IDCLIENTE" ColumnName="T015_IDCLIENTE" />
+          <ScalarProperty Name="T011_IDGRUPO" ColumnName="T011_IDGRUPO" />
+          <ScalarProperty Name="T007_IDSISTEMA" ColumnName="T007_IDSISTEMA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T017_EMPRESA">
+      <EntityTypeMapping TypeName="JADMModel.T017_EMPRESA">
+        <MappingFragment StoreEntitySet="T017_EMPRESA">
+          <ScalarProperty Name="T017_IDEMPRESA" ColumnName="T017_IDEMPRESA" />
+          <ScalarProperty Name="T017_CNPJ_EMPRESA" ColumnName="T017_CNPJ_EMPRESA" />
+          <ScalarProperty Name="T017_RAZAO_SOCIAL" ColumnName="T017_RAZAO_SOCIAL" />
+          <ScalarProperty Name="T017_NOME_FANTASIA" ColumnName="T017_NOME_FANTASIA" />
+          <ScalarProperty Name="T017_CODIGO_SAP" ColumnName="T017_CODIGO_SAP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T018_FUNCAO">
+      <EntityTypeMapping TypeName="JADMModel.T018_FUNCAO">
+        <MappingFragment StoreEntitySet="T018_FUNCAO">
+          <ScalarProperty Name="T018_IDFUNCAO" ColumnName="T018_IDFUNCAO" />
+          <ScalarProperty Name="T018_DESCRICAO" ColumnName="T018_DESCRICAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T020_CENTRO_CUSTO_APROVADOR">
+      <EntityTypeMapping TypeName="JADMModel.T020_CENTRO_CUSTO_APROVADOR">
+        <MappingFragment StoreEntitySet="T020_CENTRO_CUSTO_APROVADOR">
+          <ScalarProperty Name="T001_IDCOLABORADOR" ColumnName="T001_IDCOLABORADOR" />
+          <ScalarProperty Name="T002_IDCENTROCUSTO" ColumnName="T002_IDCENTROCUSTO" />
+          <ScalarProperty Name="T007_IDSISTEMA" ColumnName="T007_IDSISTEMA" />
+          <ScalarProperty Name="DT_INICIO" ColumnName="DT_INICIO" />
+          <ScalarProperty Name="DT_FINAL" ColumnName="DT_FINAL" />
+          <ScalarProperty Name="OBS_APROVADOR" ColumnName="OBS_APROVADOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T022_AREA">
+      <EntityTypeMapping TypeName="JADMModel.T022_AREA">
+        <MappingFragment StoreEntitySet="T022_AREA">
+          <ScalarProperty Name="T022_IDAREA" ColumnName="T022_IDAREA" />
+          <ScalarProperty Name="T022_DESCRICAO" ColumnName="T022_DESCRICAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T023_AREA_COLABORADOR">
+      <EntityTypeMapping TypeName="JADMModel.T023_AREA_COLABORADOR">
+        <MappingFragment StoreEntitySet="T023_AREA_COLABORADOR">
+          <ScalarProperty Name="T001_IDCOLABORADOR" ColumnName="T001_IDCOLABORADOR" />
+          <ScalarProperty Name="T022_IDAREA" ColumnName="T022_IDAREA" />
+          <ScalarProperty Name="T007_IDSISTEMA" ColumnName="T007_IDSISTEMA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T025_PROFITCENTER">
+      <EntityTypeMapping TypeName="JADMModel.T025_PROFITCENTER">
+        <MappingFragment StoreEntitySet="T025_PROFITCENTER">
+          <ScalarProperty Name="T025_IDPROFITCENTER" ColumnName="T025_IDPROFITCENTER" />
+          <ScalarProperty Name="T025_DESCRICAO" ColumnName="T025_DESCRICAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T026_CLASSIFICACAO">
+      <EntityTypeMapping TypeName="JADMModel.T026_CLASSIFICACAO">
+        <MappingFragment StoreEntitySet="T026_CLASSIFICACAO">
+          <ScalarProperty Name="T026_IDCLASSIFICACAO" ColumnName="T026_IDCLASSIFICACAO" />
+          <ScalarProperty Name="T026_DESCRICAO" ColumnName="T026_DESCRICAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T027_ADM_JADM">
+      <EntityTypeMapping TypeName="JADMModel.T027_ADM_JADM">
+        <MappingFragment StoreEntitySet="T027_ADM_JADM">
+          <ScalarProperty Name="Usu_Adm_JADM" ColumnName="Usu_Adm_JADM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T029_PERFIL_SISTEMA">
+      <EntityTypeMapping TypeName="JADMModel.T029_PERFIL_SISTEMA">
+        <MappingFragment StoreEntitySet="T029_PERFIL_SISTEMA">
+          <ScalarProperty Name="T029_ID" ColumnName="T029_ID" />
+          <ScalarProperty Name="T007_IDSISTEMA" ColumnName="T007_IDSISTEMA" />
+          <ScalarProperty Name="T009_IDPERFIL" ColumnName="T009_IDPERFIL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T024_ADCOLABORADOR">
+      <EntityTypeMapping TypeName="JADMModel.T024_ADCOLABORADOR">
+        <MappingFragment StoreEntitySet="T024_ADCOLABORADOR">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="Associar" ColumnName="Associar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="T010_PERFIL_SISTEMA" TypeName="JADMModel.T010_PERFIL_SISTEMA" StoreEntitySet="T010_PERFIL_SISTEMA">
+      <EndProperty Name="T008_MENU">
+        <ScalarProperty Name="T007_IDSISTEMA" ColumnName="T007_IDSISTEMA" />
+        <ScalarProperty Name="T008_IDMENU" ColumnName="T008_IDMENU" />
+      </EndProperty>
+      <EndProperty Name="T009_PERFIL">
+        <ScalarProperty Name="T009_IDPERFIL" ColumnName="T009_IDPERFIL" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="T013_GRUPO_EMAIL_COLABORADOR" TypeName="JADMModel.T013_GRUPO_EMAIL_COLABORADOR" StoreEntitySet="T013_GRUPO_EMAIL_COLABORADOR">
+      <EndProperty Name="T001_COLABORADOR">
+        <ScalarProperty Name="T001_IDCOLABORADOR" ColumnName="T001_IDCOLABORADOR" />
+      </EndProperty>
+      <EndProperty Name="T011_GRUPO">
+        <ScalarProperty Name="T011_IDGRUPO" ColumnName="T011_IDGRUPO" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="T019_PERFIL_FUNCAO" TypeName="JADMModel.T019_PERFIL_FUNCAO" StoreEntitySet="T019_PERFIL_FUNCAO">
+      <EndProperty Name="T009_PERFIL">
+        <ScalarProperty Name="T009_IDPERFIL" ColumnName="T009_IDPERFIL" />
+      </EndProperty>
+      <EndProperty Name="T018_FUNCAO">
+        <ScalarProperty Name="T018_IDFUNCAO" ColumnName="T018_IDFUNCAO" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="T021_CENTRO_CUSTO_GESTOR" TypeName="JADMModel.T021_CENTRO_CUSTO_GESTOR" StoreEntitySet="T021_CENTRO_CUSTO_GESTOR">
+      <EndProperty Name="T001_COLABORADOR">
+        <ScalarProperty Name="T001_IDCOLABORADOR" ColumnName="T001_IDCOLABORADOR" />
+      </EndProperty>
+      <EndProperty Name="T002_CENTROCUSTO">
+        <ScalarProperty Name="T002_IDCENTROCUSTO" ColumnName="T002_IDCENTROCUSTO" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="T028_SETOR_COLABORADOR" TypeName="JADMModel.T028_SETOR_COLABORADOR" StoreEntitySet="T028_SETOR_COLABORADOR">
+      <EndProperty Name="T001_COLABORADOR">
+        <ScalarProperty Name="T001_IDCOLABORADOR" ColumnName="T001_IDCOLABORADOR" />
+      </EndProperty>
+      <EndProperty Name="T005_SETOR">
+        <ScalarProperty Name="T005_IDSETOR" ColumnName="T005_IDSETOR" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

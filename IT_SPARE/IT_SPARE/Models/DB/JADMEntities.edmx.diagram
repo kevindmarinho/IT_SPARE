@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d1f497b62a6e42a4ac9684ea097c4324" Name="Diagram1">
+        <EntityTypeShape EntityType="JADMModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.sysdiagrams" Width="1.5" PointX="9.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T001_COLABORADOR" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T002_CENTROCUSTO" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T003_TIPOCOLABORADOR" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T004_CARGO" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T005_SETOR" Width="1.5" PointX="7.5" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T006_TURNO" Width="1.5" PointX="3" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T007_SISTEMA" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T008_MENU" Width="1.5" PointX="6" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T009_PERFIL" Width="1.5" PointX="8.25" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T011_GRUPO" Width="1.5" PointX="7.5" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T012_GRUPO_EMAIL" Width="1.5" PointX="9.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T014_PERFIL_COLABORADOR" Width="1.5" PointX="10.5" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T015_CLIENTE" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T016_GRUPO_CLIENTE" Width="1.5" PointX="9.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T017_EMPRESA" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T018_FUNCAO" Width="1.5" PointX="10.5" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T020_CENTRO_CUSTO_APROVADOR" Width="1.5" PointX="7.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T022_AREA" Width="1.5" PointX="5.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T023_AREA_COLABORADOR" Width="1.5" PointX="7.5" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T025_PROFITCENTER" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T026_CLASSIFICACAO" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T027_ADM_JADM" Width="1.5" PointX="2.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T029_PERFIL_SISTEMA" Width="1.5" PointX="9.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="JADMModel.T024_ADCOLABORADOR" Width="1.5" PointX="11.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="JADMModel.FK_T001_COLABORADOR_T002_CENTROCUSTO" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T001_COLABORADOR_T003_TIPOCOLABORADOR" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T001_COLABORADOR_T004_CARGO" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T001_COLABORADOR_T006_TURNO" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T014_PERFIL_COLABORADOR_T001_COLABORADOR" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T020_CENTRO_CUSTO_APROVADOR_T001_COLABORADOR" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T023_AREA_COLABORADOR_T001_COLABORADOR" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T002_CENTROCUSTO_T005_SETOR" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T002_CENTROCUSTO_T017_EMPRESA" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T002_CENTROCUSTO_T025_PROFITCENTER" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T002_CENTROCUSTO_T026_CLASSIFICACAO" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T020_CENTRO_CUSTO_APROVADOR_T002_CENTROCUSTO" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T008_MENU_T007_SISTEMA" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T014_PERFIL_COLABORADOR_T007_SISTEMA" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T016_GRUPO_CLIENTE_T007_SISTEMA" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T020_CENTRO_CUSTO_APROVADOR_T007_SISTEMA" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T023_AREA_COLABORADOR_T007_SISTEMA" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T014_PERFIL_COLABORADOR_T009_PERFIL" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T012_GRUPO_EMAIL_T011_GRUPO" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T016_GRUPO_CLIENTE_T011_GRUPO" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T016_GRUPO_CLIENTE_T015_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.FK_T023_AREA_COLABORADOR_T022_AREA" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.T010_PERFIL_SISTEMA" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.T013_GRUPO_EMAIL_COLABORADOR" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.T019_PERFIL_FUNCAO" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.T021_CENTRO_CUSTO_GESTOR" ManuallyRouted="false" />
+        <AssociationConnector Association="JADMModel.T028_SETOR_COLABORADOR" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
